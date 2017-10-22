@@ -1,0 +1,30 @@
+language: objective-c
+osx_image: xcode8.2
+rvm:
+- 2.2
+
+before_install:
+- chmod a+x ./scripts/*.sh
+
+install:
+- ./scripts/install-unity.sh
+
+script:
+# - ./scripts/test.sh
+- ./scripts/build.sh
+
+after_success:
+- ./scripts/export-package.sh i18n-unity-csharp
+
+# deploy:
+#   provider: releases
+#   api_key:
+#     # generate using `travis encrypt <super_secret> --add deploy.api_key.secure`
+#     secure:
+#   file:
+#     - release/i18n-unity-csharp.${TRAVIS_TAG}.unitypackage
+#
+#   skip_cleanup: true
+#   on:
+#     repo: GabLeRoux/i18n-unity-csharp # todo: use MoonGateLabs/i18n-unity-csharp
+#     tags: true
