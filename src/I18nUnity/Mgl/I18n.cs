@@ -1,6 +1,8 @@
-﻿using Lib.SimpleJSON;
+using Lib.SimpleJSON;
 using System;
+#if UNITY_EDITOR
 using UnityEngine;
+#endif
 using System.Linq;
 
 namespace Mgl
@@ -21,7 +23,6 @@ namespace Mgl
 
         static I18n()
         {
-           
         }
 
         protected I18n()
@@ -42,12 +43,16 @@ namespace Mgl
             {
                 string localConfigPath = _localePath + _currentLocale;
                 // Read the file as one string.
+                #if UNITY_EDITOR
                 TextAsset configText = Resources.Load(localConfigPath) as TextAsset;
                 config = JSON.Parse(configText.text);
+                #endif
             }
             else if (_isLoggingMissing)
             {
+                #if UNITY_EDITOR
                 Debug.Log("Missing: locale [" + _currentLocale + "] not found in supported list");
+                #endif
             }
         }
 
@@ -108,7 +113,9 @@ namespace Mgl
             }
             else if (_isLoggingMissing)
             {
+                #if UNITY_EDITOR
                 Debug.Log("Missing translation for:" + key);
+                #endif
             }
             return translation;
         }
@@ -138,7 +145,9 @@ namespace Mgl
             }
             else if (_isLoggingMissing)
             {
+                #if UNITY_EDITOR
                 Debug.Log("Missing singPlurKey:" + singPlurKey + " for:" + key);
+                #endif
             }
             return translation;
         }

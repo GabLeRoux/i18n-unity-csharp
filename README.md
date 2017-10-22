@@ -6,7 +6,7 @@ Created and used by [Moon Gate Labs](http://moongatelabs.com/)
 
 It allows developers to utilize multiple languages seamlessly within their Unity projects.
 
-<del>It is also able to work outside of Unity projects as a standalone library!</del> See [#4](https://github.com/MoonGateLabs/i18n-unity-csharp/issues/4)
+It is also able to work outside of Unity projects as a standalone library!
 
 ## Status
 
