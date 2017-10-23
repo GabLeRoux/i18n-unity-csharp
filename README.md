@@ -1,5 +1,10 @@
 # i18n-unity-csharp
 
+[![Build Status](https://travis-ci.org/GabLeRoux/i18n-unity-csharp.svg?branch=master)](https://travis-ci.org/GabLeRoux/i18n-unity-csharp)
+<!-- todo: replace with
+[![Build Status](https://travis-ci.org/ MoonGateLabs/i18n-unity-csharp.svg?branch=master)](https://travis-ci.org/ MoonGateLabs/i18n-unity-csharp)
+-->
+
 Lightweight internationalization for use with C#, uses common [`__('...')` gettext](https://www.gnu.org/software/gettext/manual/gettext.html) syntax.
 
 Created and used by [Moon Gate Labs](http://moongatelabs.com/)
