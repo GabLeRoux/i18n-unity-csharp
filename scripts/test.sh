@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-project_path=$(pwd)/src/
+project_path=$1
 test_results=$(pwd)/reports/unit-test-results.xml
 
 error_code=0

@@ -1,8 +1,8 @@
 #!/usr/bin/env sh
 
-project=$1
+project_path=$1
+project=$2
 
-project_path=$(pwd)/src
 export_path=$(pwd)/current-package/${project}.unitypackage
 
 error_code=0
