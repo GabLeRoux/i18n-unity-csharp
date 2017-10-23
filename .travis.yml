@@ -11,10 +11,10 @@ install:
 
 script:
 # - ./scripts/test.sh
-- ./scripts/build.sh src/I18nUnity
+- ./scripts/build.sh ./src/I18nUnity
 
 after_success:
-- ./scripts/export-package.sh src/I18nUnity i18n-unity-csharp
+- ./scripts/export-package.sh ./src/I18nUnity i18n-unity-csharp
 
 # deploy:
 #   provider: releases
